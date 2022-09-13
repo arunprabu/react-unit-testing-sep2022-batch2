@@ -1,0 +1,154 @@
+
+Unit Testing React Apps with JEST, React Testing Library and EnzymeJS  (18 Hours)
+---
+  Prereq: 
+  --
+    React JS 
+
+  ---
+
+  Hands-on
+  --
+    Explain => Coding => Demo => Try out => (Tiny-Todos)
+
+  
+  Softwares Reqd:
+  --
+    NodeJS v 16+ 
+    VS Code 
+    Browser 
+
+
+  Materials:
+  --
+    PDF 5 Page Document
+    Project Source Code in Github 
+
+  Expectation:
+  --
+    Case Study 
+
+---
+Agenda
+--
+  Software Dev Methodology (Traditional)
+
+
+
+  Automated Testing 
+  4 Levels of Testing
+  2 Testing Methodologies (modern)
+  2 Testing Patterns 
+  3 Testing Tools 
+
+---
+
+
+Project: Calc 
+--
+  Source Documents: FRD
+
+  Requirements
+    Design (UI, F/E Arch Design, B/E Arch Design, DB Design)
+      Development
+        Testing 
+          Deployment 
+            Maintanance 
+
+
+  Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (QA PASSED) => Deployment
+
+Developer 
+--
+  [Feature: add]
+
+    FRD => Test Cases (Requirements) => Project Functionality 
+
+    Test Cases for add Feature
+    --
+      1. inputs should be of numbers  
+      2. output should also be a number 
+      3. if wrong inputs entered, 'ADD' button should be disabled 
+
+    Functionality Code
+    ----
+      function add(a, b){
+        if(typeof a === 'number' && typeof b === 'number'){
+          return a + b;
+        }
+      }
+
+    add(10, 20); // 30
+    add(5, 2); // 7
+  
+    [TOOLS]
+
+---
+
+Automated Testing
+----
+  4 Levels of Automated Testing
+  =======
+    0. Static Type Checking 
+        * checking the data type of variables, arguments, return types
+        Tools: TypeScript / Flow JS / PropTypes 
+
+    1. Unit Testing (To learn)
+        * testing small unit of a comp 
+        * testing independent unit of a comp
+        * testing in isolation 
+
+        Tools: JEST (Framework and a Test Runner) + React Testing Library (or) JEST + EnzymeJS 
+
+    2. Integration Testing 
+        * testing modules together (with rest api calls)
+        
+        Tools: JEST (Framework and a Test Runner) + React Testing Library (or) JEST + EnzymeJS 
+
+
+    3. End to End Testing / E2E 
+        * testing the whole app 
+        * mostly carried out by QA Team 
+
+        Tools: CypressJS, Selenium, Protractor, Cucumber 
+
+---
+
+2 Testing Methodologies (modern)
+=--=====
+  1. Test Driven Development (TDD) (To Learn)
+      * write NEW CODE only if automated test fails 
+
+      Dev Writes test cases => (failure) => Dev writes fn code => (success) => [CODE COMPLETE]
+
+      Test Pattern: AAA (Arrange, Act, Assert )
+      Tools: JEST 
+
+  2. Behaviour Driven Development (BDD)
+      * is an agile s/w dev methodology 
+      * app is documented, designed around the Behaviour, the end user wants to experience when they interact with it 
+
+      Dev Writes test cases around the Behaviour we want to see => (failure) => Dev writes fn code => (success) => [CODE COMPLETE]
+      
+      Test Pattern: Given, When, Then 
+      Tools: Jasmine JS 
+    
+
+2 Testing Patterns 
+--
+  1. AAA (Arrange, Act, Assert )
+  2. Given, When, Then 
+
+3 Testing Tools 
+--
+  1. JEST (Testing Framework and also a Test Runner)
+  2. React Testing Library (RTL) - Testing Utility for DOM Querying 
+  3. EnzymeJS - Testing Utility for DOM Querying (similar jQuery)
+      supports officially till React 16. 
+      Also work unofficially in React 17. 
+
+
+=========
+RTL Guiding Principle 
+=========
+
