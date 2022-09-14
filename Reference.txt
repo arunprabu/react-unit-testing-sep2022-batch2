@@ -148,7 +148,12 @@ Automated Testing
       Also work unofficially in React 17. 
 
 
+Bad Testing Practices 
+Good Testing Practices 
 =========
 RTL Guiding Principle 
 =========
+
+Code Coverage 
+
 
