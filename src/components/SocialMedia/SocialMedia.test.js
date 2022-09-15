@@ -56,8 +56,6 @@ describe('SocialMediaComponent', () => {
     const snapshotJSON = renderer.create(<SocialMedia name='Instagram' followersCount='200K'/>).toJSON();
     // let's assert with a matcher toMatchSnapshot() from jest
     expect(snapshotJSON).toMatchSnapshot();
-
-
   });
 
 });

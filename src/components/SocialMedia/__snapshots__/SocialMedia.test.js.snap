@@ -6,7 +6,7 @@ exports[`SocialMediaComponent has right SocialMedia comp snapshot 1`] = `
     Social Media
   </h2>
   <h3>
-    Testing Props, Events, States, JSX, CSS, Snapshot Testing!
+    Testing Props, Events, States, JSX, CSS, Snapshot Testing
   </h3>
   <p>
     Top Social Media: 
