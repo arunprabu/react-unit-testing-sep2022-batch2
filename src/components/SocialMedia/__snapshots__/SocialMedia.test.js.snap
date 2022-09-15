@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialMediaComponent has right SocialMedia comp snapshot 1`] = `
+<div>
+  <h2>
+    Social Media
+  </h2>
+  <h3>
+    Testing Props, Events, States, JSX, CSS, Snapshot Testing!
+  </h3>
+  <p>
+    Top Social Media: 
+  </p>
+  <p
+    data-testid="topMediaInfo"
+  >
+    Instagram
+     with 
+    200K
+     Followers
+  </p>
+  <label
+    htmlFor="countryInput"
+  >
+    Enter Country Name
+  </label>
+  <input
+    id="countryInput"
+    onChange={[Function]}
+    placeholder="Enter Country"
+    type="text"
+    value="Canada"
+  />
+  <p
+    role="paragraph"
+  >
+    Visit Cognizant 
+    Canada
+     website to know more
+  </p>
+</div>
+`;
