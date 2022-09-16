@@ -26,5 +26,7 @@ describe('ContactFormComponent', () => {
     
   });
 
+  // TODO: has the submit button in enabled state when firstname is not empty
+
 });
 
