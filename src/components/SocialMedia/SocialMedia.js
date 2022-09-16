@@ -14,12 +14,15 @@ const SocialMedia = ({name, followersCount}) => {
       <h2>Social Media</h2>
       <h3>Testing Props, Events, States, JSX, CSS, Snapshot Testing</h3>
       <p>Top Social Media: </p>
-      <p data-testid="topMediaInfo">{name} with {followersCount} Followers</p>
+      <p data-testid="topMediaInfo"
+        style={{backgroundColor: '#00ff00' }}>{name} with {followersCount} Followers</p>
 
       <label htmlFor="countryInput">Enter Country Name</label>
       <input type='text' placeholder='Enter Country' value={country} 
       onChange={handleCountryChange} id="countryInput"/>
       <p role='paragraph'>Visit Cognizant {country} website to know more</p>
+
+    
     </div>
   )
 }

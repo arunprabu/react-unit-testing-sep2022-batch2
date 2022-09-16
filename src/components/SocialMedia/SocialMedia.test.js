@@ -49,6 +49,16 @@ describe('SocialMediaComponent', () => {
     expect(screen.getByRole('paragraph').textContent).toBe('Visit Cognizant Japan website to know more')
   });
 
+  it('has an element topMediaInfo with bg color yellow', () => {
+    render(<SocialMedia name='Instagram' followersCount='200K'/>);
+
+    const topMediaInfoEl = screen.getByTestId('topMediaInfo');
+    expect(topMediaInfoEl).toHaveStyle('background-color: #00ff00');
+  });
+
+  // TODO: test whether the element has 'btn-danger' class or not
+  
+
   it('has right SocialMedia comp snapshot', () => {
     // to take a snapshot we need react-test-renderer // npm i react-test-renderer@17.0.2
     // taking snapshot and also converting it to json.

@@ -13,6 +13,11 @@ exports[`SocialMediaComponent has right SocialMedia comp snapshot 1`] = `
   </p>
   <p
     data-testid="topMediaInfo"
+    style={
+      Object {
+        "backgroundColor": "#00ff00",
+      }
+    }
   >
     Instagram
      with 
