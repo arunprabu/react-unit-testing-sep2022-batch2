@@ -21,7 +21,7 @@ const ContactForm = () => {
 
   return (
     <div>
-      <h2>ContactForm</h2>
+      <h2>ContactForm | Testing Form</h2>
       <p>Welcome {formState.firstName}! </p>
       <p>We will contact you over: {formState.phone}</p>
       <form>
