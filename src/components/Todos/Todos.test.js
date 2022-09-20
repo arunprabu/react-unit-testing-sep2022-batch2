@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import Todos from "./Todos";
 
 describe('TodosComponent', () => {
@@ -15,5 +15,26 @@ describe('TodosComponent', () => {
       3. No guarantee for the sample data like this 'delectus aut autem' to be present
     */
   });
+
+  //another option
+  it('fetches todos thru REST API call [2]', async() => {
+    render(<Todos />);
+    
+    await waitFor(() => {
+      expect(screen.getByText('delectus aut autem')).toBeInTheDocument(); 
+      // avoid multiple expects in waitFor
+    });
+  });
+
+  // Let's try queryBy.. useful for negative cases
+  // This is useful for asserting an element that is not present. 
+  it('hides loading text after the data loaded', async() => {
+    await waitFor(() => {
+      expect(screen.queryByTestId('loading')).not.toBeInTheDocument();
+    });
+  });
+
+  
+
   
 });

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 const Todos = () => {
 
   const todosAPI = 'https://jsonplaceholder.typicode.com/todos?_limit=4';
+  const [isLoading, setIsLoading] = useState(true);
 
   const [todoList, setTodoList] = useState([]);
 
@@ -12,6 +13,7 @@ const Todos = () => {
       const resInJSON = await res.json();
       console.log(resInJSON);
 
+      setIsLoading(false);
       setTodoList(resInJSON);
     }
     fetchTodos();
@@ -20,6 +22,13 @@ const Todos = () => {
   return (
     <div>
       <h2>Todos | Testing REST API Data</h2>
+      {
+        isLoading?
+        <div data-testid='loading'>Loading... pls wait</div>
+        : 
+        <div>Loaded {todoList.length} Todos</div>
+      }
+
       {
         todoList.map( (todo) => {
           return(
