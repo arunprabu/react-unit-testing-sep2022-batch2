@@ -171,22 +171,14 @@ Test
 
 React 
   Jest & Jest DOM
-  Assertions, act(), mocking [Tuesday], 
-  Using spy() [Tuesday]
-  Component Testing - Introduction to Enzyme (HackerRank seem to use Enzyme) [Thursday]
-  React Testing Library [DONE]
+  
+  
+  Using spy() [Wednesday]
+  Testing hooks [Partially Done- useReducer - Wednesday]
+  Testing components within Providers (Context API) [Thursday]
   Comparison between React Testing Lib and Enzyme , simulate (Event) [Thursday]
-  Testing components within Providers (Context API) [Wednesday]
-  Testing hooks [Partially Done]
-  Testing Service API calls. [Monday]
-  Snapshot Testing [DONE]
-  Testing Class comp [Monday]
+  Component Testing - Introduction to Enzyme (HackerRank seem to use Enzyme) [Thursday]
 
-
-Testing Events, States, JSX, CSS, snapshot testing 
-
-FAQ: Why not render() only once in a comp? 
---
 
 
 

@@ -3,6 +3,7 @@ import ContactForm from './components/ContactForm/ContactForm';
 import Counter from './components/Counter/Counter';
 import SocialMedia from './components/SocialMedia/SocialMedia';
 import Todos from './components/Todos/Todos';
+import Users from './components/Users/Users';
 import Movies from './containers/Movies';
 
 function App() {
@@ -31,6 +32,9 @@ function App() {
 
       <hr/>
       <Todos />
+
+      <hr/>
+      <Users />
     </div>
   );
 }

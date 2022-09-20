@@ -3,7 +3,7 @@ import Todos from "./Todos";
 
 describe('TodosComponent', () => {
   
-  it('fetches todos thru REST API call', async() => {
+  it('fetches todos thru REST API call [1]', async() => {
     render(<Todos />);
     
     expect(await screen.findByText('delectus aut autem')).toBeInTheDocument();    
@@ -33,8 +33,5 @@ describe('TodosComponent', () => {
       expect(screen.queryByTestId('loading')).not.toBeInTheDocument();
     });
   });
-
-  
-
   
 });

@@ -11,7 +11,6 @@ const Todos = () => {
     const fetchTodos = async() => {
       const res = await fetch(todosAPI);
       const resInJSON = await res.json();
-      console.log(resInJSON);
 
       setIsLoading(false);
       setTodoList(resInJSON);
