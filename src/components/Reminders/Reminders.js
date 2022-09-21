@@ -36,8 +36,10 @@ const Reminders = () => {
     <div className='container'>
       <h2>Reminders | with useRef() and useReducer() Hooks</h2>
       <input type='text' ref={remindersInput}/>
-      <button type='button' data-testid='addReminderBtn' className='btn btn-success' 
-      onClick={handleAddReminders}>Add Reminders</button>
+      <button type='button'
+       data-testid='addReminderBtn' 
+       className='btn btn-success' 
+       onClick={handleAddReminders}>Add Reminders</button>
 
       <div className='col-md-6 offset-md-3'>
         <ul className="list-group">

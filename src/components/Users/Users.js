@@ -14,11 +14,9 @@ const Users = () => {
   useEffect( () => {
     fetchAPI('https://jsonplaceholder.typicode.com/users?_limit=4')
       .then( (res) => {
-        console.log('*************')
         setUserList(res);
       })
       .catch( (err) => {
-        console.log('$$$$$$$$$$$$$$')
         setIsError(true);
       });
   }, []);

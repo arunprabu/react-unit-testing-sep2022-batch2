@@ -1,10 +1,13 @@
 import './App.css';
 import ContactForm from './components/ContactForm/ContactForm';
 import Counter from './components/Counter/Counter';
+import Posts from './components/Posts/Posts';
 import SocialMedia from './components/SocialMedia/SocialMedia';
 import Todos from './components/Todos/Todos';
 import Users from './components/Users/Users';
+import Reminders from './components/Reminders/Reminders';
 import Movies from './containers/Movies';
+
 
 function App() {
 
@@ -35,6 +38,12 @@ function App() {
 
       <hr/>
       <Users />
+
+      <hr />
+      <Posts />
+
+      <hr />
+      <Reminders />
     </div>
   );
 }
