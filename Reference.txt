@@ -173,13 +173,12 @@ React
   Jest & Jest DOM
   
   
-  Using spy() [Wednesday]
-  Testing hooks [Partially Done- useReducer - Wednesday]
   Testing components within Providers (Context API) [Thursday]
+  UserEvent -- of RTL 
   Comparison between React Testing Lib and Enzyme , simulate (Event) [Thursday]
   Component Testing - Introduction to Enzyme (HackerRank seem to use Enzyme) [Thursday]
-
-
+  Code coverage 
+  
 
 
 
