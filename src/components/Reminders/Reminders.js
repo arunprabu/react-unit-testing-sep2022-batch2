@@ -8,11 +8,7 @@ const Reminders = () => {
   // useReducer() will get a reducer as input and will return an array
   const [ remindersState, remindersDispatch ] = useReducer(remindersReducer);
 
-  console.log(remindersState);
-
   const handleAddReminders = () => {
-    console.log(remindersInput.current.value);
-
     // hit the api using axios
     // in then method dispatch
 

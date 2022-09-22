@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import mockFetch from "../../mocks/Posts/mockFetch";
+import mockFetch from "./mocks/Posts/mockFetch";
+
 import Posts from "./Posts";
 
 describe('PostsComponent', () => {

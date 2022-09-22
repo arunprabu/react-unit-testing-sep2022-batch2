@@ -7,10 +7,18 @@ import Todos from './components/Todos/Todos';
 import Users from './components/Users/Users';
 import Reminders from './components/Reminders/Reminders';
 import Movies from './containers/Movies';
+import { AuthContext } from './contexts/AuthContext';
+import MyProfile from './components/MyProfile/MyProfile';
 
 
 function App() {
 
+  const auth = {
+    isLoggedIn: true,
+    username: 'johnw',
+    fullName: 'John Williams',
+    lastLogin: '22/Sep/2022'
+  }
 
   const movieInfo = {
     id: 342342,
@@ -19,32 +27,37 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>Welcome to Unit Testing!</h1>
-      <hr />
-      <SocialMedia name="Instagram" followersCount="1M"/>
+    <AuthContext.Provider value={auth}>
+      <div className="App">
+        <h1>Welcome to Unit Testing!</h1>
+        <hr />
+        <SocialMedia name="Instagram" followersCount="1M"/>
 
-      <hr/>
-      <Counter />
+        <hr/>
+        <Counter />
 
-      <hr/>
-      <ContactForm />
+        <hr/>
+        <ContactForm />
 
-      <hr/>
-      <Movies {...movieInfo}/>
+        <hr/>
+        <Movies {...movieInfo}/>
 
-      <hr/>
-      <Todos />
+        <hr/>
+        <Todos />
 
-      <hr/>
-      <Users />
+        <hr/>
+        <Users />
 
-      <hr />
-      <Posts />
+        <hr />
+        <Posts />
 
-      <hr />
-      <Reminders />
-    </div>
+        <hr />
+        <Reminders />
+
+        <hr/>
+        <MyProfile />
+      </div>
+    </AuthContext.Provider>
   );
 }
 
