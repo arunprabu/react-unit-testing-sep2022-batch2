@@ -3,7 +3,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 
 const MyProfile = () => {
   const auth = useContext(AuthContext);
-  // console.log(auth);
+  //console.log(auth);
   return (
     <div>
       <h2>MyProfile | Testing Context, useContext hook</h2>

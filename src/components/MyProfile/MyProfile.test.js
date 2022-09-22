@@ -11,13 +11,14 @@ describe('MyProfileComponent', () => {
     )
   }
   
-  test('shows pls login when not receiving auth context', () => {
+  it('shows pls login when not receiving auth context', () => {
     render(<MyProfile />)
     expect(screen.getByText(/^Please login/)).toHaveTextContent(
       'Please login... You are not logged in to access profile information',
     )
   })
 
+  
   it('receives data from context provider', () => {
     const auth = {
       isLoggedIn: true,
@@ -42,7 +43,7 @@ describe('MyProfileComponent', () => {
     )
   })
 
-
+  
   // another way
   it('receives auth info value from provider', () => {
     const providerProps = {
@@ -62,5 +63,6 @@ describe('MyProfileComponent', () => {
       'Last Login: 22/Sep/2022'
     )
   })
+  
 
 });

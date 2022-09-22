@@ -1,15 +1,11 @@
 import './App.css';
-import ContactForm from './components/ContactForm/ContactForm';
-import Counter from './components/Counter/Counter';
-import Posts from './components/Posts/Posts';
-import SocialMedia from './components/SocialMedia/SocialMedia';
-import Todos from './components/Todos/Todos';
-import Users from './components/Users/Users';
-import Reminders from './components/Reminders/Reminders';
-import Movies from './containers/Movies';
-import { AuthContext } from './contexts/AuthContext';
-import MyProfile from './components/MyProfile/MyProfile';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import { AuthContext } from './contexts/AuthContext';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import PageNotFound from './components/PageNotFound/PageNotFound';
 
 function App() {
 
@@ -20,43 +16,18 @@ function App() {
     lastLogin: '22/Sep/2022'
   }
 
-  const movieInfo = {
-    id: 342342,
-    name: 'Jurassic Park',
-    url: 'https://www.imdb.com/title/tt0107290/'
-  }
-
   return (
     <AuthContext.Provider value={auth}>
-      <div className="App">
-        <h1>Welcome to Unit Testing!</h1>
-        <hr />
-        <SocialMedia name="Instagram" followersCount="1M"/>
-
-        <hr/>
-        <Counter />
-
-        <hr/>
-        <ContactForm />
-
-        <hr/>
-        <Movies {...movieInfo}/>
-
-        <hr/>
-        <Todos />
-
-        <hr/>
-        <Users />
-
-        <hr />
-        <Posts />
-
-        <hr />
-        <Reminders />
-
-        <hr/>
-        <MyProfile />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='*' element={<PageNotFound />} />
+          </Routes>  
+        </div>
+      </BrowserRouter>
     </AuthContext.Provider>
   );
 }
